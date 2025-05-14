@@ -25,6 +25,7 @@ public class Mantenimiento {
             System.out.println("\n--- Menú ---");
             System.out.println("1. Ingresar nombre y saludar");
             System.out.println("2. Sumar dos números");
+            System.out.println("3. Ver historial");
             System.out.print("Seleccione una opción: ");
             opcion = sc.nextLine();
 
@@ -45,6 +46,16 @@ public class Mantenimiento {
                     int suma = num1 + num2;
                     System.out.println("Resultado: " + suma);
                     historial.add("Suma: " + num1 + " + " + num2 + " = " + suma);
+                    break;
+                case "3":
+                    System.out.println("--- Historial ---");
+                    if (historial.isEmpty()) {
+                        System.out.println("No hay operaciones registradas.");
+                    } else {
+                        for (String item : historial) {
+                            System.out.println(item);
+                        }
+                    }
                     break;
 
                 default:
