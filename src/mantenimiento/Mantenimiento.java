@@ -24,6 +24,7 @@ public class Mantenimiento {
         do {
             System.out.println("\n--- Menú ---");
             System.out.println("1. Ingresar nombre y saludar");
+            System.out.println("2. Sumar dos números");
             System.out.print("Seleccione una opción: ");
             opcion = sc.nextLine();
 
@@ -36,6 +37,16 @@ public class Mantenimiento {
                     System.out.println(saludo);
                     historial.add("Saludo: " + saludo);
                     break;
+                case "2":
+                    System.out.print("Ingrese el primer número: ");
+                    int num1 = Integer.parseInt(sc.nextLine());
+                    System.out.print("Ingrese el segundo número: ");
+                    int num2 = Integer.parseInt(sc.nextLine());
+                    int suma = num1 + num2;
+                    System.out.println("Resultado: " + suma);
+                    historial.add("Suma: " + num1 + " + " + num2 + " = " + suma);
+                    break;
+
                 default:
                     System.out.println("Opción inválida. Intente de nuevo.");
             }
