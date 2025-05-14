@@ -26,6 +26,7 @@ public class Mantenimiento {
             System.out.println("1. Ingresar nombre y saludar");
             System.out.println("2. Sumar dos números");
             System.out.println("3. Ver historial");
+            System.out.println("4. Salir");
             System.out.print("Seleccione una opción: ");
             opcion = sc.nextLine();
 
@@ -57,7 +58,10 @@ public class Mantenimiento {
                         }
                     }
                     break;
-
+                case "4":
+                    System.out.println("Gracias por usar el sistema. ¡Hasta luego!");
+                    historial.add("El usuario salió del sistema.");
+                    break;
                 default:
                     System.out.println("Opción inválida. Intente de nuevo.");
             }
